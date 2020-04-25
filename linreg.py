@@ -8,12 +8,19 @@ import matplotlib.pyplot as plt
 # i.e the resp hyperparamter will have to be selected accordingly, else answers cannot be predicted
 
 x = np.array([1,2,3,4])  #setting x values
-y = np.array([5,6,7,8])   #setting corresponding y values to x
+y = np.array([18,19,20,21])   #setting corresponding y values to x
 
 print(x[2], y[2]) # print a single tuple to check for accuracy
 
 t1, t2 = 0, 0   # setting parameter values for hypothesis equation
-alpha = 1   # learning rate set to one (proabably better ways to set alpha)
+alpha = 0.1   # learning rate set to one (proabably better ways to set alpha)
+
+'''
+    Try out various learning rate values to facilitate faster convergence to 
+    some minimum. Like 1, .1, .01 ,etc..
+    This reduces the iteration count when finding 
+'''
+
 m = len(x)  # sample size
 
 '''
@@ -33,7 +40,7 @@ def param_guess():
 
     i = 0
 
-    while i < 90900:    # iterates 90,900 times because convergence hasn't been checked for
+    while i < 900:    # iterates n times because convergence hasn't been checked for
 
      t1 = t1 - (alpha * (1/m) * sum(((t1 + t2 * x) - y)))   
      t2 = t2 - (alpha * (1/m) * sum(((t1 + t2 * x) - y) * x))
