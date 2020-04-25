@@ -18,7 +18,11 @@ alpha = 0.1   # learning rate set to one (proabably better ways to set alpha)
 '''
     Try out various learning rate values to facilitate faster convergence to 
     some minimum. Like 1, .1, .01 ,etc..
-    This reduces the iteration count when finding 
+    This reduces the iteration count when finding.
+
+    Number of iterations should be plotted against value of J(t1, t2) to see
+    how fast it approaches minimum. And hence adjust alpha
+    
 '''
 
 m = len(x)  # sample size
