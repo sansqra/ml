@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # Linear Regression cannot fit for all types of data, hence the degree of polynomial
 # i.e the resp hyperparamter will have to be selected accordingly, else answers cannot be predicted
 
-x = np.array([1,2,3,4])  #setting x values
+x = np.array([1, 2, 3, 4, 5])  #setting x values
 y = np.array([18,19,20,21])   #setting corresponding y values to x
 
 print(x[2], y[2]) # print a single tuple to check for accuracy
